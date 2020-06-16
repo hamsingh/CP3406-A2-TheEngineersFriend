@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResistorFinder">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="38dp"
+        android:text="@string/_1st_band"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstBandSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/firstBandSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginStart="38dp"
+        android:text="@string/_2nd_band"
+        app:layout_constraintBaseline_toBaselineOf="@+id/secondBandSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/secondBandSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="38dp"
+        android:text="@string/_3rd_band"
+        app:layout_constraintBaseline_toBaselineOf="@+id/thirdBandSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/thirdBandSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="38dp"
+        android:text="@string/_4th_band"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fourthBandSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/fourthBandSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="38dp"
+        android:text="@string/_5th_band"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fifthBandSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/fifthBandSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/secondBandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/findresistor_variable_array"
+        android:prompt="@string/findresistor_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/thirdBandSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/firstBandSpinner" />
+
+    <Spinner
+        android:id="@+id/thirdBandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/findresistor_variable_array"
+        android:prompt="@string/findresistor_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/fourthBandSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/secondBandSpinner" />
+
+    <Spinner
+        android:id="@+id/fourthBandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/findresistor_variable_array"
+        android:prompt="@string/findresistor_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/fifthBandSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/thirdBandSpinner" />
+
+    <Spinner
+        android:id="@+id/firstBandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/findresistor_variable_array"
+        android:prompt="@string/findresistor_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/secondBandSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Spinner
+        android:id="@+id/fifthBandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/findresistor_multiplier_array"
+        android:prompt="@string/findresistor_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/fourthBandSpinner" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/band_coulor"
+        app:layout_constraintBottom_toTopOf="@+id/firstBandSpinner"
+        app:layout_constraintStart_toStartOf="@+id/firstBandSpinner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/resistor_value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resistorValue"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resistorValue"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="23dp"
+        android:onClick="CalculateResult"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toTopOf="@+id/resistorValue"
+        app:layout_constraintStart_toStartOf="@+id/fifthBandSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/fifthBandSpinner" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        android:text="@string/resistor_size_calculator"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
